@@ -1,4 +1,6 @@
 fun main () {
+    //Explicit Variable declaration
+
     var name: String = "John Weak"
     var age:Int = 36
     var salary:Double = 10000.0
