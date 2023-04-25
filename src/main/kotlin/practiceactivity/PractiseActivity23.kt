@@ -1,4 +1,4 @@
-package pacticeactivity
+package practiceactivity
 
 fun main (){
     var num =ArrayList<String>()
