@@ -1,32 +1,48 @@
-import java.util.*
+fun main () {
+    //activity 11
+    var grade: Int = 0
 
-fun main() {
-    val scanner = Scanner(System.`in`)
 
-    print("Enter name: ")
-    val name = scanner.nextLine()
+    //Input
+    println("Enter name:")
+    var name = readln()
+    println("Enter grade in Physics:")
+    var gradePhs = readln().toDouble()
+    println("Enter grade in Algebra:")
+    var gradeAlgebra = readln().toDouble()
+    println("Enter grade in Programming:")
+    var gradeProg = readln().toDouble()
 
-    print("Enter grade in Physics: ")
-    val physicsGrade = scanner.nextDouble()
+    //Process
 
-    print("Enter grade in Algebra: ")
-    val algebraGrade = scanner.nextDouble()
+    var averageGrade= (gradeAlgebra+gradePhs+gradeProg)/3
 
-    print("Enter grade in Programming: ")
-    val programmingGrade = scanner.nextDouble()
+    if (averageGrade<=100){
+        println("$name average grade is $averageGrade")
+        println("President Lister")
+    }else if (averageGrade<=94){
+        println("$name average grade is $averageGrade")
+        println("Dean Lister")
 
-    val averageGrade = (physicsGrade + algebraGrade + programmingGrade) / 3
+    }else if (averageGrade<=88){
+        println("$name average grade is $averageGrade")
+        println("Average Student")
+    }else if (averageGrade<=82){
+        println("$name average grade is $averageGrade")
+        println("Fair")
+    }else if (averageGrade<78){
+        println("$name average grade is $averageGrade")
+        println("Failure")
 
-    println("$name average grade is %.2f".format(averageGrade))
-
-    val gradeStatus = when (averageGrade) {
-        in 95.0..100.0 -> "President lister"
-        in 89.0..94.99 -> "Dean lister"
-        in 83.0..88.99 -> "Average Student"
-        in 78.0..82.99 -> "Fair"
-        in Double.MIN_VALUE..77.99 -> "Failure"
-        else -> "Invalid grade"
+    }else {
+        println("$name average grade is $averageGrade")
+        println("Invalid Grade")
     }
 
-    println(gradeStatus)
+
+
+
+
+
+
 }
